@@ -22,3 +22,37 @@ To run this application, you will need Python 3.8+ and the following libraries i
 
 ```bash
 pip install PyQt5 pyqtgraph pyserial SpeechRecognition numpy
+(Note: SpeechRecognition also requires PyAudio to access your microphone).
+
+🚀 Getting Started
+Clone or download this repository to your local machine.
+
+Ensure your robotic arm (Arduino or compatible microcontroller) is connected via USB.
+
+Run the main script:
+
+Bash
+python main.py
+Select your COM port from the dropdown menu and click Establish Neural Link.
+
+Use the sliders, voice commands, or memory core to control your hardware!
+
+🔌 Hardware Communication (Serial)
+The software sends simple string commands over serial at 128000 baud rate.
+The format is S[Joint_Index]:[Angle]\n.
+
+Base: S0:90
+
+Shoulder: S1:90
+
+Elbow: S2:90
+
+Gripper: S3:90
+
+You can easily parse this on your Arduino using Serial.readStringUntil('\n').
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👨‍💻 Author
+Shaymak Mahury Created for the open-source robotics community.
