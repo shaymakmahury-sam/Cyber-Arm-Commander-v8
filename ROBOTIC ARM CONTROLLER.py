@@ -1,3 +1,5 @@
+#  This is the Python Script for the Robotic Arm Commander
+
 import sys
 import serial
 import serial.tools.list_ports
